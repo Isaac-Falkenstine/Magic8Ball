@@ -31,8 +31,23 @@ describe 'As a visitor' do
 
     click_on "Log In"
 
-    expect(page).to have_content("Welcome #{user.name}!")
-    expect(current_path).to eq(dashboard_path)
+    expect(page).to have_content("Looks like your email or password is invalid")
+    expect(current_path).to eq(login_path)
   end
 
+  it "I can't login if I don't exist" do
+    password = "password"
+    visit '/'
+    click_on "Log In"
+
+    expect(current_path).to eq(login_path)
+
+    fill_in 'session[email]', with: "izack@email.com"
+    fill_in 'session[password]', with: password
+
+    click_on "Log In"
+
+    expect(page).to have_content("Looks like your email or password is invalid")
+    expect(current_path).to eq(login_path)
+  end
 end
