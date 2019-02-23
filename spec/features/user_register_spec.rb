@@ -16,5 +16,7 @@ describe 'As a visitor' do
     click_on "Register"
 
     expect(page).to have_content("Welcome as Isaac Falkenstine!")
+    expect(User.last.name).to eq("Isaac Falkenstine")
+    expect(User.last.email).to eq("isaac@email.com")
   end
 end
