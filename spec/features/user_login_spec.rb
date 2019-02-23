@@ -10,8 +10,8 @@ describe 'As a visitor' do
 
     expect(current_path).to eq(login_path)
 
-    fill_in 'user[email]', with: "isaac@email.com"
-    fill_in 'user[password]', with: password
+    fill_in 'session[email]', with: "isaac@email.com"
+    fill_in 'session[password]', with: password
 
     click_on "Log In"
 
