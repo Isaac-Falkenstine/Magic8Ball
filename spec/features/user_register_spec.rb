@@ -20,5 +20,6 @@ describe 'As a visitor' do
     expect(page).to have_content("Welcome Isaac Falkenstine!")
     expect(User.last.name).to eq("Isaac Falkenstine")
     expect(User.last.email).to eq("isaac@email.com")
+    expect(current_path).to eq(dashboard_path)
   end
 end

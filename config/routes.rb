@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post '/register', to: "users#create"
 
   resources :users, only: [:create]
+
+  get '/dashboard', to: "users#show", as: "dashboard"
 end
