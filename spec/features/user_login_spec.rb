@@ -2,9 +2,8 @@ require "rails_helper"
 
 describe 'As a visitor' do
   it 'I can login' do
-
     password = "password"
-
+    user = create(:user, email: "isaac@email.com", password: password)
     visit '/'
     click_on "Log In"
 
@@ -15,7 +14,7 @@ describe 'As a visitor' do
 
     click_on "Log In"
 
-    expect(page).to have_content("Welcome Isaac Falkenstine!")
+    expect(page).to have_content("Welcome #{user.name}!")
     expect(current_path).to eq(dashboard_path)
   end
 end
