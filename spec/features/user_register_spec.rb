@@ -25,7 +25,7 @@ describe 'As a visitor' do
 
   it "I can't register with a existing email" do
     password = "password"
-    create(:user, email = "isaac@falkenstine.com")
+    create(:user, email: "isaac@email.com")
     visit register_path
 
     fill_in 'user[email]', with: "isaac@email.com"
