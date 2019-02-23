@@ -8,6 +8,8 @@ describe 'As a visitor' do
     visit '/'
     click_on "Register"
 
+    expect(current_path).to eq(register_path)
+
     fill_in 'user[email]', with: "isaac@email.com"
     fill_in 'user[name]', with: "Isaac Falkenstine"
     fill_in 'user[password]', with: password
