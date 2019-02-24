@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @facade = UserDashboardFacade.new(current_user, params[:advice_topic])
   end
 
 private
