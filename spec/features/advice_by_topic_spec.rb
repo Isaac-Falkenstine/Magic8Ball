@@ -8,11 +8,11 @@ describe 'As a user' do
 
     visit dashboard_path
 
-    fill_in 'advice_form', with: "Friends"
+    fill_in :advice_topic, with: "Friends"
 
     click_on "Get Advice"
 
-    expect(page).to have_content("Once you find a really good friend don't do anything that could mess up your friendship.")
+    expect(page).not_to have_content("Please enter a vaild topic to recive advice.")
     expect(current_path).to eq(dashboard_path)
   end
 end
