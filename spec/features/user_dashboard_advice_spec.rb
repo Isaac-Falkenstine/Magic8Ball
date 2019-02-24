@@ -23,4 +23,17 @@ describe 'As a user' do
 
     expect(page).to have_content("Please enter a vaild topic to recive advice.")
   end
+
+  it 'I can get random advice' do
+    user = create(:user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit dashboard_path
+
+    expect(page).to have_content("Click here to get random advice")
+
+    click_on "Get Random Advice"
+
+    expect(page).not_to have_content("Click here to get random advice")
+  end
 end
