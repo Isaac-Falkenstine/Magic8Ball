@@ -8,8 +8,8 @@ describe 'AdviceService' do
   end
 
   context "instance methods" do
-    context "#results_json" do
-      it "returns a array of 5 link objects" do
+    context "#search_results" do
+      it "returns a array of advice objects" do
         service = AdviceService.new
 
         expect(service.search_results("friends")).to be_a(Hash)
