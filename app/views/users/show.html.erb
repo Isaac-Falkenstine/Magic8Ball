@@ -4,6 +4,13 @@
   <br>
   <input type="submit" value="Get Advice">
 </form>
+
 <div id="advice">
   Advice: <%= @facade.advice %>
+</div>
+<div id="random_advice">
+  Advice: <%= @facade.random_advice %>
+  <form>
+    <input type="submit" name="random_topic" value="Get Random Advice">
+  </form>
 </div>

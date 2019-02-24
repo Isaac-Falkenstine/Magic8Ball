@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @facade = UserDashboardFacade.new(current_user, params[:advice_topic])
+    @facade = UserDashboardFacade.new(current_user, params[:advice_topic], params[:random_topic])
   end
 
 private
