@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
 
   get '/dashboard', to: "users#show", as: "dashboard"
+  post '/advice', to: "advices#create"
 end

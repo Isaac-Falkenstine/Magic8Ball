@@ -8,9 +8,17 @@
 <div id="advice">
   Advice: <%= @facade.advice %>
 </div>
+<form action="advice" method="post">
+  <button type="submit" name="<%= @facade.advice %>!!!<%=@facade.user.email%>"> Save Advice</button>
+</form>
+
 <div id="random_advice">
   Advice: <%= @facade.random_advice %>
   <form>
     <input type="submit" name="random_topic" value="Get Random Advice">
+  </form>
+
+  <form action="advice" method="post" skip_before_filter :verify_authenticity_token,>
+    <button type="submit" name="<%= @facade.random_advice %>!!!<%=@facade.user.email%>"> Save Random Advice</button>
   </form>
 </div>
