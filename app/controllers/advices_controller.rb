@@ -10,4 +10,8 @@ class AdvicesController < ApplicationController
       redirect_to dashboard_path
     end
   end
+
+  def index
+    @advices = current_user.advices
+  end
 end

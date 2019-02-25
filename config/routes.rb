@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: "users#show", as: "dashboard"
   post '/advice', to: "advices#create"
+  get '/advice', to: "advices#index"
 end
