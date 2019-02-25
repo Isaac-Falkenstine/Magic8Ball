@@ -17,4 +17,8 @@
   <form>
     <input type="submit" name="random_topic" value="Get Random Advice">
   </form>
+
+  <form action="advice" method="post" skip_before_filter :verify_authenticity_token,>
+    <button type="submit" name="<%= @facade.random_advice %>!!!<%=@facade.user.email%>"> Save Random Advice</button>
+  </form>
 </div>

@@ -1,4 +1,5 @@
 class AdvicesController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def create
     advice_user = params.to_unsafe_h.key("").split("!!!")
