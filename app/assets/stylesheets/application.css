@@ -13,3 +13,78 @@
  *= require_tree .
  *= require_self
  */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #BFDBF7;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #BFDBF7;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #BFDBF7;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #FCBA04;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type=submit]:hover {
+  background-color: #e4a803;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #053C5E;
+  padding: 20px;
+  color: white;
+}
+
+body {
+  background-color: #053C5E;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
