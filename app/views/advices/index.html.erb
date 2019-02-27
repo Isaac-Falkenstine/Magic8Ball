@@ -1,4 +1,8 @@
+<form action="/dashboard">
+    <input type="submit" value="Dashboard" />
+</form>
+<h2> Saved Advice: </h2>
 <% @advices.each do |advice| %>
   <%= advice.body %>
-  Advice Saved on <%= advice.created_at %>
+  Advice Saved on <%= advice.added_time %> <br>
 <% end %>
